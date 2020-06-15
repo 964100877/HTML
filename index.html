@@ -10,22 +10,35 @@
         html{
             height:100%;
         }
-        @keyframes myfirst {
+        @keyframes h1 {
+            0%{opacity:0}
+            100% {opacity:100}
+        }
+        @keyframes p1{
             0%{opacity:0}
             100% {opacity:100}
         }
         h1{
+             color:white;
+             font-size:35px;
+             position:absolute;
+             width:100%;
+             text-align:center;
+             animation:h1 10s ;
+         }
+        #p1{
             color:white;
-            font-size:35px;
+            font-size:20px;
             position:absolute;
             width:100%;
+            top:60px;
             text-align:center;
-            animation:myfirst 10s ;
+            animation:p1 10s;
         }
     </style>
 </head>
 <body>
 <h1>TTBigCat</h1>
-<p>没啥特别的，就瞎玩。</p>
+<p id="p1">妙趣横生</p>
 </body>
 </html>
