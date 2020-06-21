@@ -1,20 +1,102 @@
-<!DOCTYPE html><!--声明网页用html5新规范读取-->
-<html lang="en"><!--声明网页语言为英语-->
-<head><!--头部-->
-    <meta charset="UTF-8"><!--声明网页编码为中文-->
-    <meta name="keywords" content=""><!--设置搜索关键字-->
-    <meta name="description" content=""><!--描述内容-->
+<!--声明网页用html5新规范读取-->
+<!DOCTYPE html>
+<!--声明网页语言为英语-->
+<html lang="en">
+<!--头部-->
+<head>
+    <!--声明网页编码为中文-->
+    <meta charset="UTF-8">
+    <!--设置搜索关键字-->
+    <meta name="keywords" content="">
+    <!--描述内容-->
+    <meta name="description" content="">
+    <!--用于移动端开发，限制显示格式-->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"><!--移动端开发-->
-    <title>一个小标题</title><!--标题-->
-    <link rel="shortcut icon" href="img/ico1.png" type="image/png"><!--设置网站标题图标-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--title:标题设置-->
+    <title>一个小标题</title>
+    <!--设置网站标题图标-->
+    <link rel="shortcut icon" href="img/ico1.png" type="image/png">
+    <!--style:用于写CSS样式-->
     <style>/*写css样式*/
-
     </style>
-    <link rel="stylesheet" href=""><!--用来引入外部样式文件-->
+    <!--link:用来引入外部样式文件-->
+    <link rel="stylesheet" href="">
 </head>
-<body><!--主体-->
+<!--主体-->
+<body>
+    <!--div:主要用来布局的，是层的意思-->
+    <div>
+        123
+        <div>321</div>
+    </div>
+    <!--h+x:标题，从1级到6级，1最大，6最小，自动加粗字体-->
     <h1>嘿嘿</h1>
+    <!--p:表示一个段落-->
+    <p>123</p>
+    <!--单标签br /:换行符-->
+    <br />
+    <p>希望最终能得到一个公开公正的结果，理工大快刀斩乱麻式的注销学籍，<br />
+    你就一点责任都没有？明明入学信息不符，你就看不出来？这件事如果<br />
+    不严肃处理，怎么面对将来的考生？我辛辛苦苦换来的成绩，也许就是<br />
+    给别人努力的</p>
+    <!--单标签hr /:生产一条水平线，主要起装饰作用-->
+    <hr />
+    <!--a:实现链接跳转-->
+    <a href="https://www.baidu.com/" title="百度">百度</a>
+    <!--a:实现文件跳转-->
+    <a href="../index.html" title="TTBigCat">网站</a>
+    <!--a:实现链接新窗口打开-->
+    <a  href="https://www.baidu.com/" target="_blank">百度</a>
+    <!---单标签img:加载外部图片。src:用来设定路径。title:鼠标移到图片上的提示。alt:加载失败的提示内容-->
+    <img src="img/cat.jpg" title="猫猫" alt="加载不出" />
+    <!---span:作用与div一样，都是用来布局的，不同的是，div会独占一行，而span不会，用于行内布局-->
+    <span></span>
+    <span>123</span>
+    <span>321</span>
+    <!--ul/ol:列表，ul是无序列表，ol是有序列表，它们的列表内容都是li标签.-->
+    <ul>
+        <li>哈哈1</li>
+        <li>哈哈2</li>
+        <li>哈哈3</li>
+        <!--复制的快捷键ctrl+D-->
+    </ul>
+    <!--ul/ol:列表，ul是无序列表，ol是有序列表，它们的列表内容都是li标签.-->
+    <ol>
+        <li>哈哈1</li>
+        <li>哈哈2</li>
+        <li>哈哈3</li>
+        <!--复制的快捷键ctrl+D-->
+    </ol>
+    <!--注释的快捷键:ctrl+shift+/-->
+    <!--标签属性:
+        1.通常由属性名=属性值组成。
+        2.起附加信息作用.
+        3.不是所有的标签都有属性，比如br-->
+    <p title="文字" class="content" id="content">一段小文字</p>
+    <!--文本格式化标签：就是通过标签来美化文本外观
+        1.b和strong：都有加粗作用，但stong除了加粗还有强调作用
+        注：签掉主要用于SEO时，便于提取关键字。属于行级标签，不会主动换行-->
+    <b>b文字</b>
+    <strong>strong文字</strong>
+    <!--i和em：使文字倾斜，em具有强调作用。如果只是简单的倾斜效果，用i标签就可以了
+               比如添加图标等，只对文字有效。属于行级标签，不会主动换行-->
+    <i>i倾斜</i>
+    <em>em倾斜</em>
+    <!--per:预格式文本，保留换行和空格及宽度，默认字体大小会小一号。
+            属于块级标签，会独占一行，比较少用-->
+    <pre>        人渣之所以是人渣
+        是因为   他们不是人
+        甚至 都不是动物， 动
+        物那么 可爱 说是动物
+        简直 是  侮辱 动物。
+    </pre>
+    <!--small和big:分别让字体缩小一号或者放大一号。
+        big在HTML5中淘汰掉了，但是没有删除。属于行级标签。
+        开发中尽量不要使用淘汰的标签，它无法同步到git。
+        浏览器支持最小字号为12px，比这个小的字号就需要用CSS处理了。-->
+    <p>p正常文字</p>
+    <small>small小一号文字</small>
 </body>
 <script>// 放脚本
 
