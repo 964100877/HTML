@@ -4,6 +4,7 @@
 <html lang="en">
 <!--头部-->
 <head>
+    <!--meta:元信息标签-->
     <!--声明网页编码为中文-->
     <meta charset="UTF-8">
     <!--设置搜索关键字-->
@@ -24,6 +25,12 @@
     <link rel="stylesheet" href="">
 </head>
 <!--主体-->
+<!--块级标签（h1）会独占一行。可以设置width,height。
+    行级标签（b）不会独占一行，设置width,height无效。-->
+<!--单标签:指单独由一个标签组成，微信小程序的单标签不闭合会报错。
+    例如：<br /><hr /><img /><input /><link /><meta />
+    双标签:有开始标签和结束标签两部分组成
+    例如：<p></p>、<div></div>、<a></a>、<h1></h1>-->
 <body>
     <!--div:主要用来布局的，是层的意思-->
     <div>
@@ -97,6 +104,96 @@
         浏览器支持最小字号为12px，比这个小的字号就需要用CSS处理了。-->
     <p>p正常文字</p>
     <small>small小一号文字</small>
+    <!--sub和sup:设置文本为下标（sub）和上标（sup）
+                 用来调整文本显示的基线，字体小一号
+                 最好用CSS样式来实现-->
+    <p>p正常文本哟</p>
+    <p>sub<sub>下标文本</sub>呀</p>
+    <p>sup<sup>sup上标文本</sup>啦</p>
+    <!--实体转义符的显示：都有特定的指令，一般以& 开头; 结尾。
+        &nbsp;空格
+        &times;乘号
+        &divide;除号
+        &lt;小于号<
+        &gt;大于号>
+        &amp;与号&
+        &copy;版权©-->
+    <p>带空&nbsp;&nbsp;格文字。2&times;2=4。4&divide;2=2。&lt;p&gt;&copy;</p>
+    <!--块级标签（div）:（相当于执行了display:block;操作）
+        1.会独占一行。
+        2.可以设置width,height。
+        3.没有设置宽高，默认铺满整行。
+        4.可以包含块级和行级元素。
+        行级标签（b）:（相当于执行了display:inline;操作）
+        1.不会独占一行，与相邻的行级元素占同一行，直到行占满，自动换行。
+        2.设置width,height无效。
+        3.只能包含行级元素。-->
+    <div>div块级标签</div>
+    <div style="width:300px;height:120px;background:gray;">div块级设置标签</div>
+    <b>b行级标签</b>
+    <b style="width:300px;height:120px;background:gray;">b行级设置标签</b>
+    <strong>strong行级标签</strong>
+    <!--块级标签转为行级标签-->
+    <div style="width:300px;height:120px;background:gray;display:inline;">div块级转行级标签</div>
+    <!--行级标签转为块级标签-->
+    <b style="width:300px;height:120px;background:brown;display:block;">b行级转块级标签</b>
+    <!--标准规则1：块级标签里面可以包含行级标签。
+              但是行级标签里面却不能包含块级标签。-->
+    <div>div块级标签<b>b行级标签</b></div><!--对的-->
+    <!--<b>b行级标签<div>div块级标签</div></b> 错的-->
+    <!--标准规则2：<p>里面不能放块级标签-->
+    <p><b>b行级标签</b></p><!--对的-->
+    <!--<p><div>div块级标签</div></p> 错的-->
+    <!--标准规则3：部分标签不能放块级标签，只能放行级标签。
+        <h1> <h2> <h3> <h4> <h5> <h6> <p> <dt>-->
+    <!--标准规则4：块级标签与块级标签并列、行级标签与行级标签并列。-->
+    <div>标准4:div起包裹作用<h1>h1块级标签</h1><h2>h2块级标签</h2></div><!--对的-->
+    <div>标准4:div起包裹作用<b>b行级标签</b><p>p行级标签</p></div><!--对的-->
+    <div>标准4:div起包裹作用<h1>h1块级标签</h1><b>b行级标签</b></div><!--错的-->
+    <!--07 语义化标签-->
+    <a href="https://www.baidu.com/" title="百度"><img src="https://www.baidu.com/img/dong_851e16d55be10cf1ee1220167ebb6ecc.gif" alt="百度"></a>
+    <!--q：短文本引用，就是文本加上引号-->
+    <q>引用我</q>
+    <!--address:为网页加入地址信息-->
+    <address>
+        <p>联系人：李帅哥 233333333</p>
+        <p>地址：围着银河系中心转再围着太阳公转的球体</p>
+    </address>
+    <!--caption:为表格添加标题和摘要。摘要不会显示，用于增加表格的可读性。
+        语法:<table summary="表格简介文本">-->
+    <table border="1"><!--为表格添加1条框线-->
+        <caption>体重表</caption>
+        <tr>
+            <th>水分</th>
+            <th>体脂</th>
+            <th>肌肉</th>
+            <th>骨重</th>
+        </tr>
+        <tr>
+            <td>70%</td>
+            <td>21斤</td>
+            <td>60斤</td>
+            <td>5斤</td>
+        </tr>
+    </table>
+    <!--1.6 企业官网文件命名规范
+                项目开发的时候，项目里的文件或目录名不能出现汉字和空格之类
+            的其他符号，文件和目录名一般以字母或数字以及下划线开头。
+            目录名：不出现大写字母和汉字和空格之类的其他符号。
+            1.项目名：taobaopro
+                图名：imgrs/img/pic
+                视频：video
+                音频：music
+                文件：file/web/sites
+            2.文件名：不出现大写字母和汉字和空格之类的其他符号。
+                首页：index.html
+              产品页：product.html
+              订单页：order.html
+              新闻页：news.html
+          新闻详情页：news_details.html
+            联系我们：contact.html
+                介绍：about.html-->
+    <div>保持格式</div>
 </body>
 <script>// 放脚本
 
